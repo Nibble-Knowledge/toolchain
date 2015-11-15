@@ -1,0 +1,7 @@
+START
+
+LET S AS 8 BE "S"
+LET Z BE "Z"
+
+END
+
