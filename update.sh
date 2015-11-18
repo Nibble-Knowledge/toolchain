@@ -10,11 +10,10 @@ then
 	fi
 fi
 
-python -V > /dev/null 2&>1 || { echo "Please install Python before using this toolchain!"; exit 1; }
-git --version > /dev/null 2&>1 || { echo "Please install Git before using this toolchain!"; exit 1; }
-gcc --version > /dev/null 2&>1 || { echo "Please install GCC before using this toolchain!"; exit 1; }
-make --version > /dev/null 2&>1 || { echo "Please install Make before using this toolchain!"; exit 1; }
-rm 1
+python -V > /dev/null 2>&1 || { echo "Please install Python before using this toolchain!"; exit 1; }
+git --version > /dev/null 2>&1 || { echo "Please install Git before using this toolchain!"; exit 1; }
+gcc --version > /dev/null 2>&1 || { echo "Please install GCC before using this toolchain!"; exit 1; }
+make --version > /dev/null 2>&1 || { echo "Please install Make before using this toolchain!"; exit 1; }
 
 if [ ! -d cpu-assembler ]
 then
