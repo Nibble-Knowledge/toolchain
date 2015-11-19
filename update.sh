@@ -3,7 +3,7 @@
 
 if [ "$1" = "refresh" -o "$1" = "clean" ]
 then
-	rm -rf cpu-assembler label-replacer macro-assembler asm-library cute-basic
+	rm -rf cpu-assembler label-replacer macro-assembler asm-library cute-basic out-*
 	if [ "$1" = "clean" ]
 	then
 		exit 0
@@ -73,3 +73,4 @@ then
 	git pull
 fi
 cd ..
+
