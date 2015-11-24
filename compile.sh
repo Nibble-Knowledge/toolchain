@@ -38,6 +38,7 @@ then
 		make debug
 		cd ..
 		gdb --args ./label-replacer/lr4 label-replacer/examples/deffiles/standard.def "out-lrasm" "out-llasm"
+		exit
 	fi
 	echo "Incorrect assembly:" 
 	echo ""
@@ -55,6 +56,7 @@ then
 		make debug
 		cd ..
 		gdb --args ./cpu-assembler/as4 "out-llasm" "$2"
+		exit
 	fi
 	echo "Incorrect assembly:" 
 	echo ""
