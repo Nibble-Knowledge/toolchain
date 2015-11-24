@@ -16,6 +16,7 @@ then
 	echo "Incorrect CUTE BASIC:"
 	echo ""
 	cat $1
+	exit 1
 fi
 ./macro-assembler/NKMacroASM.py "out-macro" "out-lrasm"
 RETCODE=$?
@@ -24,6 +25,7 @@ then
 	echo "Incorrect macro assembly:"
 	echo ""
 	cat out-macro
+	exit 1
 fi
 ./label-replacer/lr4 label-replacer/examples/deffiles/standard.def "out-lrasm" "out-llasm"
 RETCODE=$?
