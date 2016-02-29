@@ -22,9 +22,6 @@ fi
 if [ ! -d label-replacer ]
 then
 	git clone git://github.com/nibble-knowledge/label-replacer || { echo "Could not retrieve label replacer!"; exit 1; }
-	cd label-replacer
-	git checkout plr4
-	cd ..
 fi
 if [ ! -d macro-assembler ]
 then
