@@ -18,7 +18,7 @@ then
 	cat out-macro
 	exit 1
 fi
-./label-replacer/lr4.py label-replacer/examples/deffiles/standard.def "out-lrasm" "out-llasm" > "out-llasm"
+./label-replacer/lr4.py label-replacer/examples/deffiles/standard.def "out-lrasm" "out-llasm"
 RETCODE=$?
 if [ $RETCODE -ne 0 ]
 then
