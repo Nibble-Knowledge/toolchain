@@ -18,19 +18,10 @@ then
 	cat out-macro
 	exit 1
 fi
-./label-replacer/lr4 label-replacer/examples/deffiles/standard.def "out-lrasm" "out-llasm"
+./label-replacer/lr4.py label-replacer/examples/deffiles/standard.def "out-lrasm" "out-llasm" > "out-llasm"
 RETCODE=$?
 if [ $RETCODE -ne 0 ]
 then
-	if [ $RETCODE -gt 128 ]
-	then
-		cd label-replacer
-		make clean
-		make debug
-		cd ..
-		gdb --args ./label-replacer/lr4 label-replacer/examples/deffiles/standard.def "out-lrasm" "out-llasm"
-		exit
-	fi
 	echo "Incorrect assembly:" 
 	echo ""
 	cat out-lrasm
